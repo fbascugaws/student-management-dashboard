@@ -33,8 +33,8 @@ export function getStudentsAPI() {
  * @returns {Object} The newly created student object including a unique ID.
  */
 export function addStudentsAPI(newStudentData) {
-    if (!newStudentData.id || !newStudentData.firstName || 
-        !newStudentData.lastName || !newStudentData.email) {
+    if (!newStudentData.firstName || !newStudentData.lastName 
+            || !newStudentData.email) {
         console.error("Name or email is null or undefined.");
         return {};
     }
