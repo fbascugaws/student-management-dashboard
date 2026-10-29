@@ -69,11 +69,22 @@ studentForm.addEventListener('submit', (event) => {
         return;
     }
 
+    if (!isValidEmail(studentData.email)) {
+        alert('Please input a valid email!');
+        return;
+    }
+
     addStudentsAPI(studentData); // save record
     localStudent = getStudentsAPI(); // sync with database
     renderTable(localStudent); // refresh table UI
     studentForm.reset(); // reset form to blank
 });
+
+const isValidEmail = (email) => {
+    // Checks for: [text] @ [text] . [text (at least 2 letters)]
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    return emailRegex.test(email);
+};
 
 /**
  * Initializes localStudents with the invoked function getStudentsAPI()
