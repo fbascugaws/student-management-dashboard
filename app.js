@@ -1,4 +1,4 @@
-import { getStudentsAPI, addStudentsAPI } from './api.js';
+import { getStudentsAPI, addStudentsAPI, isValidEmail } from './api.js';
 
 /**
  * Stores object data from getStudentsAPI()
@@ -79,12 +79,6 @@ studentForm.addEventListener('submit', (event) => {
     renderTable(localStudent); // refresh table UI
     studentForm.reset(); // reset form to blank
 });
-
-const isValidEmail = (email) => {
-    // Checks for: [text] @ [text] . [text (at least 2 letters)]
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-    return emailRegex.test(email);
-};
 
 /**
  * Initializes localStudents with the invoked function getStudentsAPI()

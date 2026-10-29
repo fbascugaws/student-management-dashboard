@@ -38,6 +38,10 @@ export function addStudentsAPI(newStudentData) {
         console.error("Name or email is null or undefined.");
         return {};
     }
+    if (!isValidEmail(newStudentData.email)) {
+        console.error("Email format is invalid.");
+        return {};
+    }
 
     const savedStudent = {
     id: Date.now(),
@@ -47,3 +51,9 @@ export function addStudentsAPI(newStudentData) {
     mockStudentDb.push(savedStudent);
     return savedStudent;
 }
+
+export const isValidEmail = (email) => {
+    // checks for: [text] @ [text] . [text (at least 2 letters)]
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    return emailRegex.test(email);
+};
