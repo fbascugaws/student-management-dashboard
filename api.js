@@ -44,9 +44,9 @@ export function addStudentsAPI(newStudentData) {
     }
 
     const savedStudent = {
-    id: Date.now(),
-    ...newStudentData // automatically assigns the rest of the fields
-  };
+        id: Date.now(),
+        ...newStudentData // automatically assigns the rest of the fields
+    };
 
     mockStudentDb.push(savedStudent);
     return savedStudent;
