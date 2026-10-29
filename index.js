@@ -20,9 +20,8 @@ console.log("Return Saved Object:", addedStudent);
 console.log("\nTest Case 3");
 console.log("Updated DB State:", getStudentsAPI());
 
-
-console.log("\n=== EXERCISE 2 TEST CASES ===");
-console.log("Test Case 1");
-console.log("\nTest Case 2");
-console.log("\nTest Case 3");
-console.log("\nTest Case 4");
+// console.log("\n=== EXERCISE 2 TEST CASES ===");
+// console.log("Test Case 1");
+// console.log("\nTest Case 2");
+// console.log("\nTest Case 3");
+// console.log("\nTest Case 4");

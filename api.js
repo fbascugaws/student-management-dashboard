@@ -1,7 +1,7 @@
 /**
- * Stores object data. 
+ * Stores student object data. 
  * The object is composed of first name, last name, and email.
- * Prepopulated with minimum 2 objects.
+ * Prepopulated with 2 objects.
  */
 const mockStudentDb = [
   {
@@ -35,7 +35,7 @@ export function getStudentsAPI() {
 export function addStudentsAPI(newStudentData) {
   const savedStudent = {
     id: Date.now(),
-    ...newStudentData
+    ...newStudentData // automatically assigns the rest of the fields
   };
 
   mockStudentDb.push(savedStudent);
